@@ -1,6 +1,8 @@
-		Decentralized KYC Verification Process for Banks
+						Decentralized KYC Verification Process for Banks
 
 
 The project aims to address the issue of tracking money laundering activities and enhance the KYC (Know Your Customer) verification process for banks, particularly central and government banks.
 
-The proposed solution involves implementing a decentralized KYC verification process using blockchain technology. The central bank will maintain a blockchain ledger that keeps track of banks and their KYC activities. The ledger will record which banks are allowed to add new customers and perform KYC, as well as track the status of customer KYC, whether completed or pending.
+The proposed solution involves implementing a decentralized KYC verification process using blockchain technology. 
+The central bank will maintain a blockchain ledger that keeps track of banks and their KYC activities. 
+The ledger will record which banks are allowed to add new customers and perform KYC, as well as track the status of customer KYC, whether completed or pending.
