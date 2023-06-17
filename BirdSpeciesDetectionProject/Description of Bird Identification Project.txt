@@ -1,4 +1,7 @@
-     		Visual and Acoustic Identification of Bird Species
+                                                  Visual and Acoustic Identification of Bird Species
 
 
-The primary goal of creating the identification website is to promote knowledge and interest in bird watching, focusing on bird identification. The website aims to simplify the bird identification process thereby making bird-watching more accessible to enthusiasts. To achieve this, the experimental setup utilizes Convolutional Neural Networks (CNN), a technology that excels in feature extraction for image and audio recognition. This method effectively extracts features and classifies various types of data including images and audio files. 
+The primary goal of creating the identification website is to promote knowledge and interest in bird watching, focusing on bird identification. 
+The website aims to simplify the bird identification process thereby making bird-watching more accessible to enthusiasts. 
+To achieve this, the experimental setup utilizes Convolutional Neural Networks (CNN), a technology that excels in feature extraction for image and audio recognition. 
+This method effectively extracts features and classifies various types of data including images and audio files. 
