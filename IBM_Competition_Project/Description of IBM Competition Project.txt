@@ -1,0 +1,4 @@
+		Exploratory Data Analysis – Zomato, Bangalore
+
+
+In this IBM competition project, I undertook an Exploratory Data Analysis (EDA) on a vast dataset comprising more than 7,000 restaurants listed on Zomato in Bangalore. The primary goal was to gain deep insights into the factors that contribute to the presence of diverse restaurant types across different areas of Bangalore. By employing effective data visualization techniques and conducting thorough statistical analysis, I aimed to predict restaurant ratings accurately. Remarkably, the project yielded an impressive prediction accuracy of 85%. Beyond its predictive success, this analysis offered valuable insights and actionable information for aspiring entrepreneurs and individuals interested in venturing into the restaurant business.
