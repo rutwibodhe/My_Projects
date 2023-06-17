@@ -1,1 +1,86 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >0.5.16;
+
+contract Bankekyc
+{
+    address KYCAdmin;
+
+    constructor ()
+    {
+        KYCAdmin = msg.sender;
+    }
+
+    modifier OnlyAdmin ()
+    {
+        require (msg.sender ==KYCAdmin, "Only Admin has the access to this function");
+        _;
+    }
+
+    modifier validAddress(address _addr)
+    {
+        require(_addr != address(0), "Not valid address");
+        _;
+    }
+
+    struct BankInfo
+    {
+        string BankName;
+        address BankAddress;
+        uint256 KYCCount;
+        bool CanAddCustomer;
+        bool CanDoKYC;
+    }
+
+    struct customersInfo
+    {
+        string CustomerName;
+        string CustomerData;
+        address CustomerBank;
+        bool KYCStatus;
+    }
+
+    mapping (address => BankInfo) Bank;
+    mapping (string => CustomerInfo) Customer;
+
+    function AddNewBank (string memory _BName, address _BAddress) OnlyAdmin validAddress(_BAddress) public{
+        Bank[_BAddress]=BankInfo(_BName, _BAddress, 0, true, true);
+    }
+
+    function AddNewCustomer (string memory _CName, string memory _CData) public {
+        require(Bank[msg.sender].CanAddCustomer, "The Bank doesn't have permission to Add Customer");
+        Customer[_CName]=CustomerInfo(_CName, _CData,msg.sender,false );
+    }
+
+    function BlockBankfromAddingCustomer (address _BankAddress) OnlyAdmin validAddress(_BankAddress) public {
+       Bank[_BankAddress].CanAddCustomer=false; 
+    }
+
+    function AllowBankfromAddingCustomer(address _BAddress) OnlyAdmin validAddress(_BAddress) public{
+        Bank[_BAddress].CanAddCustomer=true;
+    }
+
+    function BlockBankfromDoingKYC (address _BankAddress) OnlyAdmin validAddress(_BankAddress) public {
+        Bank[_BankAddress].CanAddCustomer=false;
+    }
+
+    function AllowBankfromDoingKYC (address _BAddress) OnlyAdmin validAddress(_BAddress) public {
+        Bank[_BAddress].CanDoKYC=true;
+    }
+
+    function PerformKYC (string memory _CName) public {
+        require(Bank[msg.sender].CanDoKYC, "The Bank doesn't have permission to Update KYC");
+        Customer[_CName].KYCStatus=true;
+        Bank[msg.sender].KYCCount++;
+    }
+
+    function ViewCustomerData (string memory CustName) public view returns (bool, string memory) {
+        return (Customer[CustName].KYCStatus, Customer[CustName].CustomerData);
+    }
+
+    function ViewBankData (address BAdd) public view returns (uint256) {
+        return (Bank[BAdd].KYCCount);
+    }
+
+
 
