@@ -1,8 +1,10 @@
- 				LR – USA Housing Dataset
+ 			                                                       	LR – USA Housing Dataset
 
 
-This project aims to develop a machine learning model using linear regression to predict house prices based on various data related to the house, such as its size, average area income, and price. The motivation behind this project is to address the common questions that buyers have when purchasing a house, such as determining the fair price and whether they are paying an appropriate amount.
+This project aims to develop a machine learning model using linear regression to predict house prices based on various data related to the house, such as its size, average area income, and price. 
+The motivation behind this project is to address the common questions that buyers have when purchasing a house, such as determining the fair price and whether they are paying an appropriate amount.
 
-By utilizing linear regression, the model attempts to establish a linear relationship between predictor variables (X) and the target variable (y), which is the house price in this case. The model minimizes the sum of squared residuals, which represent the differences between the actual house prices and the predicted prices.
+By utilizing linear regression, the model attempts to establish a linear relationship between predictor variables (X) and the target variable (y), which is the house price in this case. 
+The model minimizes the sum of squared residuals, which represent the differences between the actual house prices and the predicted prices.
 
 Overall, this project aims to provide a reliable and accurate prediction of housing prices for various regions in the USA. It seeks to assist house hunters in avoiding overpaying for properties by providing them with estimated prices based on relevant data.
